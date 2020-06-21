@@ -8,7 +8,6 @@ import { Footer } from "./Footer";
 
 async function LoadingIndicator() {
     await new Promise(resolve => setTimeout(resolve, 1000));
-    console.log("Show loading ind")
     return <div>Loading...</div>;
 }
 

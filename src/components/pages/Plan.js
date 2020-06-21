@@ -1,16 +1,17 @@
 /** @jsx createElement */
 import { createElement } from "@bikeshaving/crank";
+import { loadPlan } from "../../database/Plan"
 
 export async function Plan({ id = -1 }) {
-    let data = {}
+    let plan = {}
 
     if (id > 0) {
-        data = await loadPlan(id)
+        try {
+            plan = await loadPlan(id)
+        } finally { }
     }
 
-    return <div>Plan</div>
-}
+    console.log(plan.json)
 
-async function loadPlan({ id }) {
-    return true
+    return <div>Plan {plan.id}</div>
 }
