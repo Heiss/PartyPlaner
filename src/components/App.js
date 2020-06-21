@@ -44,4 +44,5 @@ function bootstrap() {
     render()
 }
 
-bootstrap() 
+bootstrap()
+M.AutoInit();

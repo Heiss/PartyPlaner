@@ -1,5 +1,9 @@
+install:
+	sudo apt install npm
+	npm install
+
 server:
-	parcel index.html
+	npm start
 
 build:
-	parcel build index.html
+	npm build
